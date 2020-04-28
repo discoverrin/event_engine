@@ -1,4 +1,9 @@
 <div class="col-12 event-search-form">
+
+    <div class="col-12 mb-5">
+        <h3 class="text-dark">Search event recommendations</h3>
+        <hr>
+    </div>
     <div class="col-12 pb-1 animated fadeInUp fast">
         <div class="form-group">
             <label class="font-weight-bold">Please select dates b/w which you want to search the events</label>
@@ -48,7 +53,7 @@
         </div>
     </div>
 
-    <div class="col-12 p-0 collapse" id="optionalFields">
+    <div class="col-12 p-0 collapse {{$class}}" id="optionalFields">
         <div class="col-12 mt-3 px-0 pb-3 animated fadeInUp fast">
             <div class="col-12">
                 <label class="font-weight-bold">Gender (optional)</label>
@@ -123,9 +128,11 @@
         </div>
     </div>
 
-    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#optionalFields" aria-expanded="false" aria-controls="collapseExample">
+    @if(empty($class))
+    <a href="/search" class="btn btn-link">
         more...
-    </button>
+    </a>
+    @endif
 
     <div class="col-12 col-md-12 mt-3 animated fadeInUp fast">
         <a href="/events" class="btn btn-big-round col-12 p-3 btn-primary mx-0 font-weight-bold animated fadeInUp faster">

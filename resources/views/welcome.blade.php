@@ -20,7 +20,7 @@
                                 <br><small class="font-weight-normal">trending<br>events!</small></h1>
                         </div>
                         <div class="col-12 col-lg-6 pt-5 pb-5 my-0 my-lg-5">
-                            @include('includes.form')
+                            @include('includes.form', ['class' => '']);
                         </div>
                     </div>
                 </div>
