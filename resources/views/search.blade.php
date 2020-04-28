@@ -10,8 +10,8 @@
 
 @section('body')
     <div class="container-fluid p-0 ">
-        <div class="col-12 p-0 bg-white p-0">
-            <div class="container p-0">
+        <div class="col-12 p-0 bg-light p-0">
+            <div class="container p-3">
                 <div class="col-12 p-0 col-md-7 m-auto">
                 @include('includes.form', ['class' => 'show shadow-none'])
                 </div>
