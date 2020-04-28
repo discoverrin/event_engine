@@ -5,8 +5,8 @@
         <div class="container">
             <div class="row">
             <div clas="col-12">
-                <a class="text-muted navbar-brand font-weight-bold" href="/">
-                    <i class="text-light fas fa-arrow-left fs-18"></i>&nbsp;&nbsp;Search
+                <a class="text-gray navbar-brand font-weight-bold" href="/">
+                    <i class=" fas fa-arrow-left fs-18"></i>&nbsp;&nbsp;Search
                 </a>
             </div>
             </div>

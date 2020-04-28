@@ -95,12 +95,17 @@ body
     margin-top: -1.44rem;
     margin-bottom: -1.44rem;
 }
-
+.card:hover
+{
+    text-decoration: none;
+}
 .card
 {
     box-shadow: 3px 1px 11px rgba(0, 0, 0, 0.058823529411764705);
     /* border: 1px solid #f1f1f1; */
     border-radius: 15px;
+    overflow: hidden;
+    border:0px;
 }
 
 
@@ -114,6 +119,11 @@ body
 .bg-dark
 {
     background: #0f2734 !important;
+}
+
+.fs-20
+{
+    font-size: 20px;
 }
 
 .fs-12
@@ -144,10 +154,10 @@ input
 .event-search-form
 {
     background: #FFF;
-    padding: 20px;
     border-top-right-radius: 40px;
     border-top-left-radius: 40px;
-    padding-top: 40px;
+    border-radius: 40px;
+    padding: 40px 20px;
     box-shadow: 3px 1px 11px rgba(0, 0, 0, 0.058823529411764705);
 }
 
@@ -162,4 +172,22 @@ input
 {
     border-radius: 20px;
     padding: 20px !important;
+}
+
+.banner
+{
+    background: url(/assets/images/home-bg-2.jpg);
+    background-position: right;
+    background-size: cover;
+}
+
+
+.bg-half-opacity
+{
+    background: rgba(0, 0, 0, 0.24);
+}
+
+.text-shadow
+{
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.12156862745098039);
 }
