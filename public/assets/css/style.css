@@ -163,7 +163,7 @@ input
 
 .event-detail-card
 {
-    margin-top: -35px;
+    margin-top: -50px;
     z-index: 2;
     padding-top: 25px !important;
 }
@@ -190,4 +190,16 @@ input
 .text-shadow
 {
     text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.12156862745098039);
+}
+
+.no-border-radium
+{
+    border-radius: 0px !important;
+}
+
+.performer
+{
+    height: 200px;
+    background-size: cover;
+    background-position: center;
 }

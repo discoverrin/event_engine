@@ -20,7 +20,7 @@
                     <span class="d-block d-lg-none color-orange fs-12">1st - 7th Apr</span>
                     <h4 class="card-title font-weight-bold text-dark fs-18 mb-1 mb-lg-0 mt-lg-2 mt-0">Tomorrowland 2020</h4>
                     <p class="d-none d-lg-block">
-                        <span class="color-orange fs-16">1st - 7th Apr</span> <span class="pl-2 text-gray fs-16">Boom, Belgium</span>
+                        <span class="color-orange fs-16">1st - 7th Apr</span> <span class="pl-2 text-gray fs-16">&bull; &nbsp;Boom, Belgium</span>
                     </p>
                     <!-- Subtitle -->
                     <p class="d-block d-lg-none  text-gray pb-0 mb-0 fs-12">
