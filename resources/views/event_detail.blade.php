@@ -99,9 +99,11 @@
     <div class="container">
         <div class="col-12">
             <div class="row">
-                @for($i = 0; $i < 5; $i ++)
+                @isset($events)
+                @foreach($events as $event)
                     @include('includes.event_card')
-                @endfor
+                @endforeach
+                @endisset
             </div>
         </div>
     </div>

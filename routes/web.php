@@ -21,10 +21,5 @@ Route::get('/search', function () {
     return view('search');
 });
 
-Route::get('/events', function () {
-    return view('events');
-});
-
-Route::get('/event', function () {
-    return view('event_detail');
-});
+Route::get('/events', 'EventsController@index')->name('events');
+Route::get('/event/{event_id}', 'EventsController@detail')->name('event');

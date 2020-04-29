@@ -18,7 +18,7 @@
     <div class="container animated fadeInUp faster">
         <div class="row">
         <div class="col-12 mt-4">
-            <h4 class="font-weight-bold">21 events found!</h4>
+            <h4 class="font-weight-bold">{{count($events)}} events found!</h4>
             <hr>
         </div>
         </div>
@@ -28,9 +28,9 @@
         <div class="row">
         <div class="col-12 my-4">
             <div class="row">
-                @for($i = 0; $i < 10; $i ++)
+                @foreach($events as $event)
                     @include('includes.event_card')
-                @endfor
+                @endforeach
             </div>
         </div>
         </div>

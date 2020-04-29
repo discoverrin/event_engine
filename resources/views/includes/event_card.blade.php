@@ -1,13 +1,22 @@
+@php
+    $externalImage = strpos($event['img_src'], 'ttps:');
+    $imgSrc = $event['img_src'];
+    if(!$externalImage)
+    {
+           $imgSrc = 'https://s3.us-east-2.amazonaws.com/eventraveler/'.$event['img_src'];
+    }
+@endphp
+
 <div class="col-md-4 animated fadeInUp fast">
 
     <!-- Card Wider -->
-    <a class="card card-cascade wider mb-4" href="/event">
+    <a class="card card-cascade wider mb-4" href="/event/{{$event['event_id']}}">
 
         <div class="row m-0">
             <div class="col-5 col-lg-12 p-3 p-lg-0">
                 <!-- Card image -->
                 <div class="view view-cascade overlay p-0">
-                    <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/photo6.jpg" alt="Card image cap">
+                    <img class="card-img-top" src="{{$imgSrc}}" alt="Card image cap">
                     <div class="mask rgba-white-slight waves-effect waves-light"></div>
                 </div>
             </div>
@@ -17,15 +26,22 @@
 
                     <!-- Title -->
                     <span class="text-gray d-block fs-12">MUSIC</span>
-                    <span class="d-block d-lg-none color-orange fs-12">1st - 7th Apr</span>
-                    <h4 class="card-title font-weight-bold text-dark fs-18 mb-1 mb-lg-0 mt-lg-2 mt-0">Tomorrowland 2020</h4>
+                    <span class="d-block d-lg-none color-orange fs-12">
+                        {{\App\Helpers\EventDateHelper::printStartEndDate($event['s_date'], $event['e_date'])}}
+                    </span>
+                    <h4 class="card-title font-weight-bold text-dark fs-18 mb-1 mb-lg-0 mt-lg-2 mt-0">
+                        {{$event['name']}}
+                    </h4>
                     <p class="d-none d-lg-block">
-                        <span class="color-orange fs-16">1st - 7th Apr</span> <span class="pl-2 text-gray fs-16">&bull; &nbsp;Boom, Belgium</span>
+                        <span class="color-orange fs-16">
+                            {{\App\Helpers\EventDateHelper::printStartEndDate($event['s_date'], $event['e_date'])}}
+                        </span> <span class="pl-2 text-gray fs-16">
+                            &bull;&nbsp;{{$event['city_name']}}, {{$event['short_name']}}</span>
                     </p>
                     <!-- Subtitle -->
                     <p class="d-block d-lg-none  text-gray pb-0 mb-0 fs-12">
                         <i class="text-muted fas fa-map-marker"></i>
-                        <strong>Boom, Belgium</strong>
+                        <strong>{{$event['city_name']}}, {{$event['short_name']}}</strong>
                     </p>
 
                     <button class="d-none d-lg-block btn btn-primary">Learn More</button>

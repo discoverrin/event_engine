@@ -19,3 +19,6 @@
         </div>
     </div>
 @endsection
+
+{{--https://eventraveler.com/get_event?event_id=354--}}
+{{--https://eventraveler.com/get_events?ids=354--}}
