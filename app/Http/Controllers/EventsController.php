@@ -60,18 +60,25 @@ class EventsController extends Controller
     public function detail($eventId)
     {
 //        https://eventraveler.com/get_event?event_id=354
-        $eventUrl = 'https://eventraveler.com/get_event?event_id='.$eventId;
+        $eventUrl = 'https://eventraveler.com/get_event?event_id=' . $eventId;
         $response = Http::get($eventUrl);
         $event = $response->json()[0];
 
-        $eventUrl = 'https://eventraveler.com/get_events?ids='.$eventId;
+        $eventUrl = 'https://eventraveler.com/get_events?ids=' . $eventId;
         $response = Http::get($eventUrl);
         $eventinfo = $response->json()[0];
 
-        $similarEventIds = $this->similarEvents[$eventId];
-        $similarEventsUrl = 'https://eventraveler.com/get_events?ids='.implode(",", $similarEventIds);
-        $similarEventsResponse = Http::get($similarEventsUrl);
-        $similarEvents = $similarEventsResponse->json();
+        $similarEventIds = !empty($this->similarEvents[$eventId]) ? $this->similarEvents[$eventId] : [];
+        if ($similarEventIds)
+        {
+            $similarEventsUrl = 'https://eventraveler.com/get_events?ids=' . implode(",", $similarEventIds);
+            $similarEventsResponse = Http::get($similarEventsUrl);
+            $similarEvents = $similarEventsResponse->json();
+        }
+        else
+        {
+            $similarEvents = [];
+        }
 
         $performers = !empty($this->performers[$eventId]) ? $this->performers[$eventId] : [];
 

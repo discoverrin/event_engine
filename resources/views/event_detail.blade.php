@@ -102,6 +102,7 @@
     </div>
     </div>
 
+    @if(count($similar_events))
     <div class="container animated fadeInUp fast">
         <div class="col-12 mt-4">
             <h5 class="font-weight-bold">{{count($similar_events)}} similar events found!</h5>
@@ -112,12 +113,13 @@
     <div class="container">
         <div class="col-12">
             <div class="row">
-                @isset($similar_events)
+
                 @foreach($similar_events as $event)
                     @include('includes.event_card')
                 @endforeach
-                @endisset
+
             </div>
         </div>
     </div>
+    @endif
 @endsection
