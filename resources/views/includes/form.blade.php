@@ -4,6 +4,9 @@
         <h3 class="text-dark">Search event recommendations</h3>
         <hr>
     </div>
+
+    <form method="get" action="/events">
+
     <div class="col-12 pb-1 animated fadeInUp fast">
         <div class="form-group">
             <label class="font-weight-bold">Please select dates b/w which you want to search the events</label>
@@ -75,19 +78,19 @@
             </div>
             <div class="btn-group btn-group-toggle col-12" data-toggle="buttons">
                 <label class="btn btn-default col-3 text-center p-3">
-                    <input type="checkbox" name="options" id="option1" checked>
+                    <input type="radio" value="18-24" name="age" checked>
                     18-24
                 </label>
                 <label class="btn btn-default col-3 text-center p-3">
-                    <input type="checkbox" name="options" id="option2">
+                    <input value="25-34" type="radio" name="age">
                     25-34
                 </label>
                 <label class="btn btn-default col-3 text-center p-3">
-                    <input type="checkbox" name="options" id="option2">
+                    <input value="35-44" type="radio" name="age">
                     35-44
                 </label>
                 <label class="btn btn-default col-3 text-center p-3">
-                    <input type="checkbox" name="options" id="option2">
+                    <input value="45+" type="radio" name="age">
                     45+
                 </label>
             </div>
@@ -135,9 +138,10 @@
     @endif
 
     <div class="col-12 col-md-12 mt-3 animated fadeInUp fast">
-        <a href="/events" class="btn btn-big-round col-12 p-3 btn-primary mx-0 font-weight-bold animated fadeInUp faster">
+        <button type="submit" class="btn btn-big-round col-12 p-3 btn-primary mx-0 font-weight-bold animated fadeInUp faster">
             <span class="text-left float-left">Search Events</span>
             <i class="fas fa-arrow-right float-right pt-1"></i>
-        </a>
+        </button>
     </div>
+    </form>
 </div>

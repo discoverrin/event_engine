@@ -4,11 +4,13 @@
 namespace App\Http\Controllers;
 
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 
 class EventsController extends Controller
 {
     protected $case1 = ['2', '74', '147', '9806', '321', '10548', '10488'];
+    protected $case2 = ['2', '74', '10555', '10547', '10897', '10801', '10803', '412'];
     protected $similarEvents = [
         '74' => ['2', '414', '412', '413']
     ];
@@ -49,9 +51,12 @@ class EventsController extends Controller
         ]
     ];
 
-    public function index()
+    public function index(Request $request)
     {
-        $eventUrl = 'https://eventraveler.com/get_events?ids='.implode(",", $this->case1);
+        $age = $request->get('age', '18-42');
+        $case = $age == "18-24" ? $this->case1 : $this->case2;
+
+        $eventUrl = 'https://eventraveler.com/get_events?ids='.implode(",", $case);
         $response = Http::get($eventUrl);
         $events = $response->json();
         return view('events', ['events' => $events]);
