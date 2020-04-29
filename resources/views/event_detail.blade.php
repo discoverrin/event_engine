@@ -54,9 +54,11 @@
                                 </h6>
                                 <hr>
                                 <!-- Text -->
+                                @isset($event['short_desc'])
                                 <div class="card-text fs-18 col-12 p-0">
                                     {!! $event['short_desc'] !!}
                                 </div>
+                                @endisset
                                 <div class="border card bg-dark d-lg-inline-block d-block shadow-sm mt-3 p-3">
                                     <p class="fs-16 text-white">Tickets starting from $44</p>
                                     <a href="" class="mt-1 mb-2 btn btn-success font-weight-bold"><i class="fas fa-ticket-alt"></i>&nbsp;Learn More</a>
@@ -110,7 +112,7 @@
         <div class="col-12">
             <div class="row">
 
-                @foreach($similar_events as $event)
+                @foreach($similar_events as $i=>$event)
                     @include('includes.event_card')
                 @endforeach
 

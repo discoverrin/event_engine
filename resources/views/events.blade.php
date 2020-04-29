@@ -28,9 +28,16 @@
         <div class="row">
         <div class="col-12 mb-4">
             <div class="row row-eq-height">
-                @foreach($events as $event)
+                @foreach($events as $i=>$event)
                     @include('includes.event_card')
                 @endforeach
+                @if(count($events) > 6)
+                <div class="col-12 col-md-3 mt-3 mx-auto animated fadeInUp fast">
+                    <button id="loadMoreEvents" data-loading="loading events..." class="text-center btn btn-big-round col-12 p-3 btn-primary mx-0 font-weight-bold animated fadeInUp faster">
+                        <span class="text-center">Show more events</span>
+                    </button>
+                </div>
+                @endif
             </div>
         </div>
         </div>

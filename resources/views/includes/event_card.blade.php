@@ -7,7 +7,7 @@
     }
 @endphp
 
-<div class="col-md-4 animated fadeInUp fast">
+<div class="col-md-4 animated fadeInUp event-card fast @if($i >= 6) d-none @endif">
 
     <!-- Card Wider -->
     <a class="card card-cascade wider mb-4" href="/event/{{$event['event_id']}}">

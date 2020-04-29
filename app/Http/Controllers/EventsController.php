@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Http;
 
 class EventsController extends Controller
 {
-    protected $case1 = ['2', '74', '147', '9806', '321', '10548', '10488'];
+    protected $case1 = ['2', '74', '147', '9806', '321', '10548', '10488', '414', '10562', '11509'];
     protected $case2 = ['2', '74', '10555', '10547', '10897', '10801', '10803', '412'];
     protected $similarEvents = [
         '74' => ['2', '414', '412', '413']
@@ -67,11 +67,13 @@ class EventsController extends Controller
 //        https://eventraveler.com/get_event?event_id=354
         $eventUrl = 'https://eventraveler.com/get_event?event_id=' . $eventId;
         $response = Http::get($eventUrl);
-        $event = $response->json()[0];
+        $event = !empty($response->json()) ? $response->json()[0] : [];
 
         $eventUrl = 'https://eventraveler.com/get_events?ids=' . $eventId;
         $response = Http::get($eventUrl);
         $eventinfo = $response->json()[0];
+
+        if(empty($event)) $event = $eventinfo;
 
         $similarEventIds = !empty($this->similarEvents[$eventId]) ? $this->similarEvents[$eventId] : [];
         if ($similarEventIds)
