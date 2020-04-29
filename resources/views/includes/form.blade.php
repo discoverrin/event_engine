@@ -63,11 +63,11 @@
             </div>
             <div class="btn-group btn-group-toggle col-12" data-toggle="buttons">
                 <label class="btn btn-default col-3 text-center p-3">
-                    <input type="checkbox" name="options" id="option1" checked>
+                    <input type="radio" name="options" id="option1" checked>
                     <i class="fas fa-male fs-30"></i>
                 </label>
                 <label class="btn btn-default col-3 text-center p-3">
-                    <input type="checkbox" name="options" id="option2">
+                    <input type="radio" name="options" id="option2">
                     <i class="fas fa-female fs-30"></i>
                 </label>
             </div>
@@ -116,7 +116,7 @@
         </div>
         <div class="col-12 mt-3 px-0 pb-3 animated fadeInUp fast">
             <div class="col-12">
-                <label class="font-weight-bold">Child friendly events (optional)</label>
+                <label class="font-weight-bold">Child-friendly events (optional)</label>
             </div>
             <div class="btn-group btn-group-toggle col-12" data-toggle="buttons">
                 <label class="btn btn-default col-3 text-center p-3">

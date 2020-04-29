@@ -76,6 +76,11 @@ body
     color: #6c757d;
 }
 
+.fs-14
+{
+    font-size: 14px;
+}
+
 .fs-18
 {
     font-size: 18px !important;
@@ -203,3 +208,23 @@ input
     background-size: cover;
     background-position: center;
 }
+
+.event-card-image
+{
+    height: 195px;
+    overflow: hidden;
+}
+.event-card-image img
+{
+    min-height: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .event-card-image
+    {
+        height: auto;
+        overflow: auto;
+    }
+}
+
