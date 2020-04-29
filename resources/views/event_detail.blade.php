@@ -105,7 +105,7 @@
     @if(count($similar_events))
     <div class="container animated fadeInUp fast">
         <div class="col-12 mt-4">
-            <h5 class="font-weight-bold">{{count($similar_events)}} similar events found!</h5>
+            <h5 class="font-weight-bold">Similar events you might find interesting</h5>
             <hr>
         </div>
     </div>

@@ -1,7 +1,7 @@
 <div class="col-12 event-search-form">
 
     <div class="col-12 mb-5">
-        <h3 class="text-dark">Search event recommendations</h3>
+        <h3 class="text-dark">Search for event recommendations</h3>
         <hr>
     </div>
 
@@ -9,7 +9,7 @@
 
     <div class="col-12 pb-1 animated fadeInUp fast">
         <div class="form-group">
-            <label class="font-weight-bold">Please select dates b/w which you want to search the events</label>
+            <label class="font-weight-bold">Please select your travel dates</label>
             <div class="row">
                 <div class="col-6">
                     <label>Start Date</label>
@@ -26,7 +26,7 @@
     <div class="col-12 mt-3 px-0 pb-3 animated fadeInUp fast">
         <div class="col-12">
             <div class="form-group">
-                <label class="font-weight-bold">Please select a country</label>
+                <label class="font-weight-bold">Please select your destination</label>
                 <select class="form-control">
                     <option>United States of America</option>
                     <option>United Kingdom</option>
@@ -95,7 +95,7 @@
                 </label>
             </div>
         </div>
-        <div class="col-12 mt-3 px-0 pb-3 animated fadeInUp fast">
+        <div class="d-none col-12 mt-3 px-0 pb-3 animated fadeInUp fast">
             <div class="col-12">
                 <label class="font-weight-bold">Price range (optional)</label>
             </div>
@@ -121,11 +121,11 @@
             <div class="btn-group btn-group-toggle col-12" data-toggle="buttons">
                 <label class="btn btn-default col-3 text-center p-3">
                     <input type="radio" name="options" id="option1" checked>
-                    <i class="fas fa-thumbs-up"></i>
+                    Yes
                 </label>
                 <label class="btn btn-default col-3 text-center p-3">
                     <input type="radio" name="options" id="option2">
-                    <i class="fas fa-thumbs-down"></i>
+                    No
                 </label>
             </div>
         </div>

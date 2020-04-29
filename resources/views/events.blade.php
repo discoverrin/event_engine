@@ -5,8 +5,8 @@
         <div class="container">
             <div class="row">
             <div clas="col-12">
-                <a class="text-gray navbar-brand font-weight-bold" href="/">
-                    <i class=" fas fa-arrow-left fs-18"></i>&nbsp;&nbsp;Search
+                <a class="text-gray navbar-brand font-weight-bold" href="/search">
+                    <i class=" fas fa-arrow-left fs-18"></i>&nbsp;&nbsp;Back to form
                 </a>
             </div>
             </div>
@@ -18,7 +18,7 @@
     <div class="container animated fadeInUp faster">
         <div class="row">
         <div class="col-12 mt-4">
-            <h4 class="font-weight-bold">{{count($events)}} events found!</h4>
+            <h4 class="font-weight-bold">Our top recommendations</h4>
             <hr>
         </div>
         </div>

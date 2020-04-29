@@ -3,7 +3,7 @@
 @section('nav')
 <nav class="navbar navbar-light bg-white shadow-none">
     <div class="container">
-        <a class="navbar-brand" href="#">Event Engine</a>
+        <a class="navbar-brand" href="#">Curated Event Engine</a>
     </div>
 </nav>
 @endsection
