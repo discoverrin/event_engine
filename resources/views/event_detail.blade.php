@@ -57,13 +57,9 @@
                                 <div class="card-text fs-18 col-12 p-0">
                                     {!! $event['short_desc'] !!}
                                 </div>
-                                <div class="bg-light d-inline-block shadow-sm mt-3 p-3">
-                                    <strong>Tickets starting from $44</strong>
-                                    <a href="" class="btn btn-link">
-                                        Get tickets
-                                    </a>
-                                    <br>
-                                    <a href="" class="mt-1 mb-2 btn btn-outline-primary font-weight-bold"><i class="fas fa-info-circle"></i>&nbsp;Learn More</a>
+                                <div class="border d-inline-block shadow-sm mt-3 p-3">
+                                    <p class="fs-16 text-dark">Tickets starting from $44</p>
+                                    <a href="" class="mt-1 mb-2 btn btn-success font-weight-bold"><i class="fas fa-ticket-alt"></i>&nbsp;Learn More</a>
                                 </div>
 
                                 @if(count($performers))
