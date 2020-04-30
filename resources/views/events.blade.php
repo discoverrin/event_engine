@@ -34,7 +34,7 @@
                 @if(count($events) > 6)
                 <div class="col-12 col-md-3 mt-3 mx-auto animated fadeInUp fast">
                     <button id="loadMoreEvents" data-loading="loading events..." class="text-center btn btn-big-round col-12 p-3 btn-primary mx-0 font-weight-bold animated fadeInUp faster">
-                        <span class="text-center">Show more events</span>
+                        <span class="text-center">Show more</span>
                     </button>
                 </div>
                 @endif
