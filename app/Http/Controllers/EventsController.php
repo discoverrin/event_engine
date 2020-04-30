@@ -9,7 +9,8 @@ use Illuminate\Support\Facades\Http;
 
 class EventsController extends Controller
 {
-    protected $case1 = ['2', '74', '147', '9806', '321', '10548', '10488', '414', '10562', '11509'];
+    protected $case1 = ['2', '74', '147', '9806', '321', '10548', '10488', '414', '10562', '11509'
+    , '10564', '10614'];
     protected $case2 = ['2', '74', '10555', '10547', '10897', '10801', '10803', '412'];
     protected $similarEvents = [
         '74' => ['2', '414', '412', '413']
