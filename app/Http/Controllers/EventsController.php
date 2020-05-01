@@ -11,7 +11,9 @@ class EventsController extends Controller
 {
     protected $case1 = ['2', '74', '147', '9806', '321', '10548', '10488', '414', '10562', '11509'
     , '10564', '10614'];
-    protected $case2 = ['2', '74', '10555', '10547', '10897', '10801', '10803', '412'];
+    protected $case2 = ['2', '74', '10555', '10547', '10897', '10801', '10803', '412',
+        '343', '339', '414', '10448'
+    ];
     protected $similarEvents = [
         '74' => ['2', '414', '412', '413']
     ];
@@ -59,8 +61,15 @@ class EventsController extends Controller
 
         $eventUrl = 'https://eventraveler.com/get_events?ids='.implode(",", $case);
         $response = Http::get($eventUrl);
-        $events = $response->json();
-        return view('events', ['events' => $events]);
+        $events = collect($response->json());
+
+        $finalEventsInOrder = [];
+        foreach ($case as $i=>$eventId)
+        {
+            $finalEventsInOrder[] = $events->where("event_id", $eventId)->first();
+        }
+
+        return view('events', ['events' => $finalEventsInOrder]);
     }
 
     public function detail($eventId)

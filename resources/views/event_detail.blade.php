@@ -47,7 +47,7 @@
                                 <span class="fs-16 color-orange pb-1 d-block">
                                     {{\App\Helpers\EventDateHelper::printStartEndDate($event['s_date'], $event['e_date'])}}
                                 </span>
-                                <h4 class="font-weight-bold text-dark mb-0">{{$event['name']}}</h4>
+                                <h4 class="font-weight-bold text-dark mb-0">{{str_replace("2020", "", $event['name'])}}</h4>
                                 <!-- Subtitle -->
                                 <h6 class="py-2 fs-16 text-gray"><span class="flag-icon flag-icon-{{strtolower($info['iso2'])}} fs-18 mr-2"></span>
                                     {{$info['city_name']}}, {{$info['short_name']}}

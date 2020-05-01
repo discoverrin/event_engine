@@ -28,7 +28,7 @@
                     <span class="d-none text-gray fs-12">MUSIC</span>
 
                     <h4 class="card-title font-weight-bold text-dark fs-16 mb-1 mb-lg-0 mt-lg-0 mt-0">
-                        {{$event['name']}}
+                        {{str_replace("2020", "", $event['name'])}}
                     </h4>
                     <span class="d-block d-lg-none color-orange fs-12">
                         {{\App\Helpers\EventDateHelper::printStartEndDate($event['s_date'], $event['e_date'])}}
