@@ -56,15 +56,43 @@ class EventsController extends Controller
 
     public function index(Request $request)
     {
-        $age = $request->get('age', '18-42');
-        $case = $age == "18-24" ? $this->case1 : $this->case2;
+        $startDate = $request->get('start_date');
+        $endDate = $request->get("end_date");
+        $age = $request->get('age');
+        $location = $request->get('location');
+        $affluence = '';
+        $children = $request->get('children') == true ? "true" : "false";
+        $gender = $request->get('gender');
 
-        $eventUrl = 'https://eventraveler.com/get_events?ids='.implode(",", $case);
+        $query = http_build_query([
+           "location" => $location,
+           "age" => $age,
+           "start_date" => $startDate,
+           "end_date" => $endDate,
+           "children" => $children,
+           "gender" => $gender
+        ]);
+
+
+//        $age = $request->get('age', '18-42');
+//        $case = $age == "18-24" ? $this->case1 : $this->case2;
+
+        $pUrl = "http://34.71.54.85/get_basic_reco?".$query;
+        $data = Http::get($pUrl);
+        $result = $data->json();
+        $eventIds = [];
+        if(!isset($result['msg']))
+        {
+            $events = collect($result);
+            $eventIds = $events->unique('event_id')->pluck('event_id')->toArray();
+        }
+
+        $eventUrl = 'https://eventraveler.com/get_events?ids='.implode(",", $eventIds);
         $response = Http::get($eventUrl);
         $events = collect($response->json());
 
         $finalEventsInOrder = [];
-        foreach ($case as $i=>$eventId)
+        foreach ($eventIds as $i=>$eventId)
         {
             $finalEventsInOrder[] = $events->where("event_id", $eventId)->first();
         }

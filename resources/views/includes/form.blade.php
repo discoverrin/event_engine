@@ -13,11 +13,11 @@
             <div class="row">
                 <div class="col-6">
                     <label>Start Date</label>
-                    <input type="date" class="form-control datepicker">
+                    <input type="date" name="start_date" class="form-control datepicker">
                 </div>
                 <div class="col-6">
                     <label>End Date</label>
-                    <input type="date" class="form-control">
+                    <input type="date" name="end_date" class="form-control">
                 </div>
             </div>
         </div>
@@ -27,32 +27,12 @@
         <div class="col-12">
             <div class="form-group">
                 <label class="font-weight-bold">Please select your destination</label>
-                <select class="form-control">
+                <select class="form-control" name="location">
                     <option>United States of America</option>
                     <option>United Kingdom</option>
                     <option>India</option>
                 </select>
             </div>
-        </div>
-    </div>
-
-    <div class="d-none col-12 mt-3 px-0 pb-3 animated fadeInUp fast">
-        <div class="col-12">
-            <label class="font-weight-bold">Please select a country</label>
-        </div>
-        <div class="btn-group btn-group-toggle col-12" data-toggle="buttons">
-            <label class="btn btn-default col-3 text-center p-3">
-                <input type="radio" name="options" id="option1" checked>
-                <span class="flag-icon flag-icon-in d-block m-auto pb-2 pt-2"></span> India
-            </label>
-            <label class="btn btn-default col-3 text-center p-3">
-                <input type="radio" name="options" id="option2">
-                <span class="flag-icon flag-icon-us d-block m-auto pb-2 pt-2"></span> USA
-            </label>
-            <label class="btn btn-default col-3 text-center p-3">
-                <input type="radio" name="options" id="option3">
-                <span class="flag-icon flag-icon-gb d-block m-auto pb-2 pt-2"></span> UK
-            </label>
         </div>
     </div>
 
@@ -63,11 +43,11 @@
             </div>
             <div class="btn-group btn-group-toggle col-12" data-toggle="buttons">
                 <label class="btn btn-default col-3 text-center p-3">
-                    <input type="radio" name="options" id="option1" checked>
+                    <input name="gender" type="radio" value="Male">
                     <i class="fas fa-male fs-30"></i>
                 </label>
                 <label class="btn btn-default col-3 text-center p-3">
-                    <input type="radio" name="options" id="option2">
+                    <input name="gender" type="radio" value="Female">
                     <i class="fas fa-female fs-30"></i>
                 </label>
             </div>
@@ -78,8 +58,8 @@
             </div>
             <div class="btn-group btn-group-toggle col-12" data-toggle="buttons">
                 <label class="btn btn-default col-3 text-center p-3">
-                    <input type="radio" value="18-24" name="age" checked>
-                    18-24
+                    <input type="radio" value="18-25" name="age" checked>
+                    18-25
                 </label>
                 <label class="btn btn-default col-3 text-center p-3">
                     <input value="25-34" type="radio" name="age">
@@ -90,8 +70,12 @@
                     35-44
                 </label>
                 <label class="btn btn-default col-3 text-center p-3">
-                    <input value="45+" type="radio" name="age">
-                    45+
+                    <input value="45-54" type="radio" name="age">
+                    45-54
+                </label>
+                <label class="btn btn-default col-3 text-center p-3">
+                    <input value="55+" type="radio" name="age">
+                    55+
                 </label>
             </div>
         </div>
@@ -101,15 +85,15 @@
             </div>
             <div class="btn-group btn-group-toggle col-12" data-toggle="buttons">
                 <label class="btn btn-default col-3 text-center p-3">
-                    <input type="checkbox" name="options" id="option1" checked>
+                    <input type="checkbox" name="affluence" id="option1" checked>
                     <i class="fas fa-dollar-sign"></i>
                 </label>
                 <label class="btn btn-default col-3 text-center p-3">
-                    <input type="checkbox" name="options" id="option2">
+                    <input type="checkbox" name="affluence" id="option2">
                     <i class="fas fa-dollar-sign"></i><i class="fas fa-dollar-sign"></i>
                 </label>
                 <label class="btn btn-default col-3 text-center p-3">
-                    <input type="checkbox" name="options" id="option2">
+                    <input type="checkbox" name="affluence" id="option2">
                     <i class="fas fa-dollar-sign"></i><i class="fas fa-dollar-sign"></i><i class="fas fa-dollar-sign"></i>
                 </label>
             </div>
@@ -120,11 +104,11 @@
             </div>
             <div class="btn-group btn-group-toggle col-12" data-toggle="buttons">
                 <label class="btn btn-default col-3 text-center p-3">
-                    <input type="radio" name="options" id="option1" checked>
+                    <input  type="radio" name="children" value="1" checked>
                     Yes
                 </label>
                 <label class="btn btn-default col-3 text-center p-3">
-                    <input type="radio" name="options" id="option2">
+                    <input type="radio" name="children" value="0">
                     No
                 </label>
             </div>
