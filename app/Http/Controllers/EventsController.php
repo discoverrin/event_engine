@@ -102,7 +102,6 @@ class EventsController extends Controller
 
     public function detail($eventId)
     {
-//        https://eventraveler.com/get_event?event_id=354
         $eventUrl = 'https://eventraveler.com/get_event?event_id=' . $eventId;
         $response = Http::get($eventUrl);
         $event = !empty($response->json()) ? $response->json()[0] : [];
@@ -113,7 +112,17 @@ class EventsController extends Controller
 
         if(empty($event)) $event = $eventinfo;
 
-        $similarEventIds = !empty($this->similarEvents[$eventId]) ? $this->similarEvents[$eventId] : [];
+        $seUrl = "http://34.71.54.85/search_event?event_id=".$eventId;
+        $seRes = Http::get($seUrl);
+        $seData = $seRes->json();
+        $eventIds = [];
+        if(!isset($seData['message']))
+        {
+            $events = collect($seData);
+            $eventIds = $events->unique('event_id')->pluck('event_id')->toArray();
+        }
+
+        $similarEventIds = $eventIds;
         if ($similarEventIds)
         {
             $similarEventsUrl = 'https://eventraveler.com/get_events?ids=' . implode(",", $similarEventIds);
