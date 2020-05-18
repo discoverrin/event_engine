@@ -28,9 +28,9 @@
             <div class="form-group">
                 <label class="font-weight-bold">Please select your destination</label>
                 <select class="form-control" name="location">
-                    <option>United States of America</option>
-                    <option>United Kingdom</option>
-                    <option>India</option>
+                    <option value="United States">United States of America</option>
+                    <option value="United Kingdom">United Kingdom</option>
+                    <option value="India">India</option>
                 </select>
             </div>
         </div>
